@@ -1,0 +1,39 @@
+{
+  "name": "bootstrap_agencia_de_viagens",
+  "version": "1.0.0",
+  "description": "Projeto Avaliativo - Agencia de Viagens",
+  "main": "index.html",
+  "repository": "https://github.com/frotas/recode_modulo_002.git",
+  "author": "Frotas <guilherme.frotas19@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "ReCode Pro",
+    "Bootstrap 5",
+    "Bootstrap",
+    "ReCode",
+    "HTML",
+    "SCSS",
+    "CSS",
+    "JS"
+  ],
+  "scripts": {
+    "css": "sass -w scss/:public/css/",
+    "server": "serve --listen 3000",
+    "nodemon": "nodemon --ignore 'src/js/*.js' -e html,scss,js -x \"yarn css\"",
+    "build": "babel ./src/js/main.js -o ./public/js/main.js",
+    "start": "npm-run-all --parallel nodemon server"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
+    "bootstrap.native": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.53.0",
+    "serve": "^13.0.4"
+  }
+}
