@@ -1,0 +1,438 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+/***** Font System *****/
+
+$font-family-sans-serif: "Paragati Narrow", sans-serif !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+/***** End Font System *****/
+/***** Color System *****/
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+) !default;
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #1fbb72 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+) !default;
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+) !default;
+
+$gradiante-enable: true;
+$shadown-elable: true;
+/***** End Color System *****/
+/***** Brakepoints Variables *****/
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+/***** End Brakepoints Variables *****/
+
+/******* Property Declaration Order *******\
+   1.  Positioning
+   2.  Box model
+   3.  Typographic
+   4.  Visual
+   5.  Misc
+
+  1. Positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  2. Box model
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  3. Typography
+  font: normal 14px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  text-decoration: underline;
+
+  4. Visual
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
+  5. Misc
+  opacity: 1;
+
+\***** End Property Declaration Order *****/
+
+/******** Cunstom Bootstrap CSS ********/
+
+.hero {
+  margin: 0;
+  padding: 0;
+  #carouselSlider.carousel {
+    .carousel-inner,
+    .carousel-item {
+      max-height: 80vh;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.wrapper {
+  gap: 2rem;
+  display: flex;
+  //prop: Top Right Bottom Left
+  padding: 0rem 4rem 0rem 4rem;
+
+  // .5rem -> 8px; 1rem -> 16px; 1.5rem -> 24px
+  // 2rem -> 32px; 2.5rem -> 40px; 3rem -> 48px;
+}
+
+.title,
+.subtitle,
+.text {
+  // Typography
+  font-size: normal;
+  font-weight: 300;
+  line-height: 2.5rem;
+  font-size-adjust: 100%;
+}
+
+.title {
+  font-size: clamp(3em, 2em + 1vw, 3em);
+  font-weight: 500;
+  /*  Size Table: ( 1REM to 16PX ):
+  .1rem = 1.5px; .5rem  = 8px;
+  1rem  = 16px; 1.5rem = 24px;
+  2rem  = 32px; 2.5rem = 40px;
+  3rem  = 48px; 3.5rem = 56px;
+  */
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.text {
+  color: $blue;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+i.material-icons,
+span.material-icons {
+  padding-right: 1rem;
+}
+
+$paddin-main: 3rem 0rem 3rem 0rem;
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  // height: calc(260px + 10vh);
+  object-fit: cover;
+}
+
+.main {
+  width: 100vw;
+
+  .container-main {
+    width: 100%;
+
+    .product-package {
+      // Box Model
+      display: flex;
+      padding: $paddin-main;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      .title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+
+        i.material-icons {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+      .text {
+        text-align: center;
+      }
+
+      .product-items {
+        gap: 3rem;
+        cursor: pointer;
+
+        &-card {
+          padding: 0;
+
+          &-header,
+          &-footer {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+          }
+
+          &-header {
+            width: 100%;
+
+            &-badge {
+              // Position
+              right: 0;
+              bottom: 150px;
+              z-index: 10;
+              padding: 0.5rem 1.5rem 0.5rem 1rem;
+              position: absolute;
+
+              // Box Model
+              display: flex;
+              max-width: fit-content;
+              align-items: end;
+              flex-direction: column;
+              justify-content: center;
+
+              // Visual
+              border-radius: 1rem 0rem 0rem 1rem;
+              background-color: $green;
+
+              // Typograph
+              text-align: center;
+
+              .text,
+              .subtitle {
+                // Box Model
+                margin: 0;
+                width: max-content;
+
+                // Typograph
+                color: #ffffff;
+                font-size: 1.3rem;
+                font-weight: 800;
+                line-height: 1.5rem;
+                text-align: center;
+              }
+
+              .text {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: center;
+              }
+            }
+          }
+
+          &-footer {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+    .product-pass {
+      padding: $paddin-main;
+
+      .product-items {
+        width: -webkit-fill-available;
+        &-card {
+          width: calc(100% + 1vw);
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  // Box Model
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+
+  // Visual
+  background-color: rgb(46, 46, 46);
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+
+  i.material-icons,
+  span.material-icons {
+    display: none;
+  }
+
+  .main {
+    .container-main {
+      .product-package,
+      .product-pass {
+        width: 100%;
+        padding: 4rem 1rem;
+        .text,
+        .title,
+        .subtitle {
+          text-align: center;
+        }
+      }
+      .product-items {
+        display: block;
+        .col {
+          width: 100%;
+          margin: 0.5rem 0rem 0.5rem 0rem;
+
+          &-card {
+            width: calc(100% + 40vw);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+
+  i.material-icons,
+  span.material-icons {
+    display: none;
+  }
+
+  .main {
+    .container-main {
+      .product-package,
+      .product-pass {
+        width: 100%;
+        padding: 4rem 1rem;
+        .text,
+        .title,
+        .subtitle {
+          text-align: center;
+        }
+      }
+      .product-items {
+        display: block;
+        .col {
+          width: 100%;
+          margin: 0.5rem 0rem 0.5rem 0rem;
+
+          &-card {
+            width: calc(100% + 40vw);
+          }
+        }
+      }
+    }
+  }
+}
+
+#link-top {
+  // Position
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  z-index: 2222;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+
+  // Typograph
+  text-decoration: none;
+
+  // Box Model
+  padding: 0.3rem;
+  border-radius: 10rem;
+
+  // Style
+  background-color: hsla(212, 6%, 54%, 0.5);
+
+  // Misc
+  box-shadow: 3px 3px 10px #343a40;
+
+  i.material-icons,
+  span.material-icons {
+    display: block;
+  }
+}
+/***** End Cunstom Bootstrap CSS *****/
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
