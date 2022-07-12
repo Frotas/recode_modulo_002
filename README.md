@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Frotas/recode_modulo_002?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/Frotas/recode_modulo_002?style=for-the-badge)
 
-<img src="##" alt="exemplo imagem">
+<img src="frotas.github.io_recode_modulo_002_bootstrap.png" alt="exemplo imagem" style="higth: 300px;">
 
 <!--- Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler. --->
 > Projeto desenvolvido para solidificar os conhecimentos obetidos durante o segundo modulo do bootcamp full-stack da ReCode Pro. <br/><br/> Enunciado da atividade: " Uma agência de viagens precisa de você para desenvolver uma série de módulos para organizar as informações dos seus clientes, apresentar seus serviços e melhorar os serviços oferecidos aos seus parceiros. "
@@ -26,14 +26,14 @@ Para o desenvolvimento da atividade terá de ser utilizado:
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
-- [ ] Desenvolver um sistema para uma agencia de viagens
-  - [ ] VisuAlg (Algoritmo)
-    - [ ] ...
-  - [ ] Bootstar (WebPage)
-    - [ ] Criar Pagina Inicial
-      - [ ] Barra de navegação
-      - [ ] Carousel de Imagens
-      - [ ] ...
+- [X] Desenvolver um sistema para uma agencia de viagens
+  - [X] VisuAlg (Algoritmo)
+    - [X] ...
+  - [X] Bootstar (WebPage)
+    - [X] Criar Pagina Inicial
+      - [X] Barra de navegação
+      - [X] Carousel de Imagens
+      - [X] ...
 
 ## 💻 Pré-requisitos
 
@@ -64,13 +64,14 @@ Para usar Agencia de Viagens - Bootstrap, siga estas etapas:
 Instalando dependencias:
 
 ```
+cd ./bootstrap/
 npm install
 ```
 
 Iniciando o projeto em selvidor local:
 
 ```
-npm run serve
+npm run start
 ```
 
 <!-- Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus! -->
@@ -80,14 +81,9 @@ npm run serve
 Para buildar o projeto em modo de desenvolvimento:
 
 ```
-npm run build:dev
-```
-
-Para buildar o projeto em modo de produção:
-
-```
 npm run build
 ```
+
 -->
 <!--
 ## 🤝 Colaboradores
@@ -111,4 +107,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-<!-- [⬆ Voltar ao topo](# Agencia de Viagens - Bootstrap) --> <br>
+<!-- [⬆ Voltar ao topo](#Agencia-de-Viagens-Bootstrap) --> <br>
