@@ -8,6 +8,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Frotas/recode_modulo_002?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/Frotas/recode_modulo_002?style=for-the-badge)
 
+Para acessar o site no ar clique [aqui](https://frotas.github.io/recode_modulo_002/bootstrap/).
+
 <img src="frotas.github.io_recode_modulo_002_bootstrap.png" alt="exemplo imagem" style="higth: 300px;">
 
 <!--- Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler. --->
